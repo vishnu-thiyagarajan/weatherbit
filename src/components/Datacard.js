@@ -17,7 +17,7 @@ const getIcon = (tmp) => {
 const Datacard = (props) => {
   const [temp, setTemp] = useState('')
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_API}/current?city=${props.city}&key=${process.env.REACT_APP_API_KEY}`)
+    fetch(`http://api.weatherbit.io/v2.0/current?city=${props.city}&key=e0a0342d67cd4b4da7bde180d45522b1`)
       .then(res => res.json())
       .then(data => setTemp(data.data[0].temp))
       .catch(() => setTemp(''))

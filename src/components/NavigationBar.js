@@ -22,7 +22,7 @@ const Styles = styled.div`
 
 const NavigationBar = () => (
   <Styles>
-    <Navbar data-spy="affix" expand='lg'>
+    <Navbar expand='lg'>
       <div className='logo'>Weatherbit</div>
     </Navbar>
   </Styles>

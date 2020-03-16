@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { BrowserRouter, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const StyledSideNav = styled.div`   
     position: fixed;
@@ -14,6 +14,7 @@ const StyledSideNav = styled.div`
 `
 
 const SideNav = (props) => {
+  // eslint-disable-next-line
   const [items, setItems] = useState([
     {
       name: 'China',
@@ -36,7 +37,6 @@ const SideNav = (props) => {
       key: 5
     }
   ])
-  const onItemClick = (name) => props.handleActive(name)
   return (
     <StyledSideNav>
       {
@@ -44,9 +44,9 @@ const SideNav = (props) => {
           return (
             <NavItem
               name={item.name}
-              onItemClick={onItemClick}
               active={item.name === props.active}
               key={item.key}
+              onhandleActive={props.onhandleActive}
             />
           )
         })
@@ -71,14 +71,11 @@ const StyledNavItem = styled.div`
     }
 `
 const NavItem = (props) => {
-  const selectItem = () => props.onItemClick(props.name)
   return (
     <StyledNavItem active={props.active}>
-      <BrowserRouter>
-        <Link to={`/home/${props.name}`} onClick={selectItem}>
-          {props.name}
-        </Link>
-      </BrowserRouter>
+      <Link to={`/home/${props.name}`} onClick={() => { props.onhandleActive(props.name) }}>
+        {props.name}
+      </Link>
     </StyledNavItem>
   )
 }
