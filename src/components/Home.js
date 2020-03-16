@@ -9,7 +9,6 @@ const Container = styled.div`
   margin-left: 21%;
 `
 const Home = (props) => {
-  console.log(props)
   const cityMap = {
     India: ['Mumbai', 'Delhi', 'Bangalore', 'Hyderabad', 'Gujarat', 'Chennai', 'Kolkata', 'Surat', 'Pune', 'Jaipur', 'Visakhapatnam', 'Kanpur', 'Nagpur', 'Lucknow', 'Thane', 'Bhopal', 'Indore', 'Pimpri-Chinchwad', 'Patna', 'Vadodara', 'Ghaziabad', 'Ludhiana', 'Agra', 'Nashik', 'Faridabad', 'Meerut', 'Rajkot', 'Kalyan-Dombivli', 'Vasai-Virar', 'Varanasi'],
     China: ['Shanghai', 'Beijing', 'Chongqing', 'Tianjin', 'Guangzhou', 'Shenzhen†', 'Chengdu', 'Nanjing', 'Wuhan', 'Xian Shaanxi', 'Hangzhou', 'Dongguan', 'Foshan Guangdong', 'Shenyang Liaoning', 'Harbin Heilongjiang', 'Qingdao Shandong', 'Dalian Liaoning', 'Jinan Shandong', 'Zhengzhou Henan', 'Changsha Hunan', 'Kunming Yunnan', 'Changchun Jilin', 'Ürümqi Xinjiang', 'Shantou Guangdong', 'Hefei Anhui', 'Shijiazhuang Hebei', 'Ningbo Zhejiang', 'Taiyuan Shanxi', 'Nanning Guangxi', 'Xiamen† Fujian'],
