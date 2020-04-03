@@ -1,4 +1,4 @@
-This project is hosted [here](https://ecstatic-wing-ab7c3c.netlify.com/)
+This project is hosted [here](https://weatherbit.netlify.com/)
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
